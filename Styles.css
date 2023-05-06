@@ -1,0 +1,412 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+img{
+    max-width: 100%;
+}
+body{
+    font-family: 'Helvetica Neve' , Arial, Helvetica, sans-serif;
+    background-color: #000;
+    color: #fff;
+}
+header{
+    display: grid; 
+    grid-template-columns: 1fr 1fr;
+    padding : 26px 56px ;
+    position: absolute;
+    width: 100%;
+    z-index: 5;
+}
+header a.logo {
+    display: block;
+}
+header .logo img{
+    display: inline-block;
+    fill : #e50914;
+    height: 70px;
+
+}
+header div+div {
+    text-align: right;
+}
+header a.button {
+    display: inline-block;
+    background-color: #e50914;
+    color : #fff;
+    text-decoration: none;
+    padding : 10px 20px;
+    border-radius: 3px;
+}
+header select{
+    background: transparent;
+    color: #fff;
+    padding : 10px 0 10px 30px;
+    border-radius: 3px;
+}
+header div.select{
+    display: inline-block;
+    margin-right: 30px;
+}
+header div.select svg{
+    height: 20px;
+    fill: #fff;
+    position: absolute;
+    margin-top: 8px;
+    margin-left: 4px;
+}
+div.splash{
+    position:relative;
+}
+div.splash div.gradient{
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0.8) 100%);
+    position: absolute;
+    inset: 0;
+}
+div.splash div.background img{
+    max-width: 100%;
+    opacity: 0.2;
+}
+div.splash div.content{
+    max-width: 655px;
+    position: absolute;
+    inset:0;
+    left: 50%;
+    margin-left: -327.5px;
+    display: grid;
+    margin-top: 18%;
+    inline-size: auto;
+    text-align: center;
+}
+div.splash h1{
+    display: block;
+    font-size: 2em;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    font-size: 3em;
+    margin: 0.67em 0;
+}
+div.splash p {
+    display: block;
+    font-weight: 300;
+    font-size: 1.25em;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+div.splash h2, div.splash h3{
+    font-weight: normal;
+}
+div.splash h1{
+    font-size: 3.125rem;
+}
+div.splash h2{
+    font-size: 1.625rem;
+    margin-top: 13px;
+    margin-bottom: 29px;
+}
+div.splash h3{
+    font-size: 1.2rem;
+}
+div.splash form{
+    display:grid;
+    margin-top: 20px;
+    grid-template-columns: 1fr max-content;
+}
+div.splash input{
+    padding: 15px 6px ;
+    font-size: 1.2rem;
+    width:100%;
+    background : rgba(0, 0, 0, 0.584);
+    border: 1px solid #fff;
+    border-radius: 5px;
+    margin-right: 15px;
+    color: #aaa;
+}
+div.splash input ~ span{
+    position: absolute;
+    left: 12px;
+    top: 14px;
+    z-index: 3;
+    color: #aaa;
+    transition: all 0.15s ease;
+    pointer-events: none;
+}
+div.splash input:focus{
+    padding-top: 19px;
+    padding-bottom: 11px;
+}
+div.splash input:focus ~ span{
+    top: 4px;
+    font-size:.8rem;
+}
+div.splash button{
+    font-size: 1.4rem;
+    padding: 12.5px 20px;
+    background-color: #e50914;
+    color: #fff;
+    border: 0;
+    border-radius: 5px;
+    margin-left: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+}
+
+
+
+section{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 46px;
+    padding : 70px 45px;
+    align-items: center;
+    border-top: 5px solid #222;
+}
+section div.texts h1{
+    display: block;
+    font-size: 3em;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+section div.texts p{
+    display: block;
+    font-size: 1.5em;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+.media{
+    position: relative;
+}
+
+.media.s1 img{
+    overflow-clip-margin: content-box;
+    overflow: clip;
+    width:100%;
+}
+
+.media.s1 video{
+    z-index: -1;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    max-width: 74%;
+    max-height: 57%;
+    position: absolute;
+    top: 47.5%;
+    left: 49%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+section:nth-child(even) div.texts{
+    order: 2;
+}
+section div.download{
+    border: 2px solid #666;
+    border-radius: 15px;
+    padding: 10px;
+    height: 95px;
+    display: grid;
+    text-align: center;
+    align-items: center;
+    position: absolute;
+    bottom: 35px;
+    width: 350px;
+    left: 41%;
+    margin-left: -140px;
+    background-color: #000;
+    gap: 15px;
+    grid-template-columns: max-content 1fr max-content;
+}
+section div.download img{
+    height: 75px;
+    width: auto;
+}
+.media.s3 img {
+    overflow-clip-margin: content-box;
+    overflow: clip;
+    width:100%;
+}
+
+.media.s3 video{
+    z-index: -1;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    max-width: 63%;
+    max-height: 47%;
+    position: absolute;
+    top: 34%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.media.s4 img {
+    overflow-clip-margin: content-box;
+    overflow: clip;
+    width:100%;
+}
+div.faq{
+    padding: 70px 50px;
+}
+div.faq h1{
+    font-size: 3.125rem;
+    text-align: center;
+    margin-bottom: 40px;
+    font-weight: 900;
+}
+div.questions{
+    max-width: 635px;
+    margin: 0 auto;
+    font-size: 1.625rem;
+}
+div.question{
+    position: relative;
+    background-color: #303030;
+    margin-bottom: 7px;
+    width: 100%;
+}
+div.question svg{
+    width: 30px;
+    height: 30px;
+    right: 30px;
+    top: 23px;
+    position: absolute;
+    transform: rotate(45deg);
+    transition: all 0.2s ease;
+}
+div.question .header{
+    display:block;
+    padding: 30px 30px;
+    border-bottom: 3px solid #000;
+    cursor: pointer;
+    font-weight: 500;
+    text-align: justify;
+    font-size: 20px;
+}
+div.question div.answer{
+    padding: 0 30px;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.2s ease;
+    font-weight: 300;
+    text-align: justify;
+    font-size: 20px;
+}
+div.question input[type="checkbox"]{
+    display: none;
+}
+div.question input[type="checkbox"]:checked ~ div.answer{
+    padding: 30px 30px;
+    max-height: 600px;
+}
+div.question input[type="checkbox"]:checked ~ .header svg{
+    transform: rotate(90deg);
+}
+
+div.final div.content{
+    max-width: 655px;
+    position: absolute;
+    inset:0;
+    left: 50%;
+    margin-left: -327.5px;
+    display: grid;
+    margin-top: 285rem;
+    margin-top: 50px;
+    inline-size: auto;
+    text-align: center;
+}
+div.final p {
+    display: block;
+    text-align: center;
+    font-weight: 300;
+    font-size: 1.25em;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+div.final form{
+    display:grid;
+    margin-top: 20px;
+    justify-content: center;
+    grid-template-columns: 1fr max-content;
+}
+div.final input{
+    position: relative;
+    display: grid;
+    justify-content: center;
+    padding: 15px 6px ;
+    font-size: 1.2rem;
+    width:70%;
+    background : rgba(0, 0, 0, 0.584);
+    border: 1px solid #fff;
+    border-radius: 5px;
+    margin-right: 15px;
+    margin-left: 290px;
+    color: #aaa;
+}
+div.final input ~ span{
+    position: absolute;
+    left: 12px;
+    top: 14px;
+    color: #aaa;
+    transition: all 0.15s ease;
+    pointer-events: none;
+}
+div.final input:focus{
+    padding-top: 19px;
+    padding-bottom: 11px;
+}
+div.final input:focus ~ span{
+    top: 4px;
+    font-size:.8rem;
+}
+div.final button{
+    font-size: 1.4rem;
+    padding: 12.5px 20px;
+    background-color: #e50914;
+    color: #fff;
+    border: 0;
+    border-radius: 5px;
+    margin-right: 235px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+}
+
+.default-ltr-cache-1ms9atz {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    padding: 0rem;
+    background-color: transparent;
+    color: rgba(255, 255, 255, 0.7);
+}
+.default-ltr-cache-1ms9atz a{
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    padding: 0rem;
+    background-color: transparent;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.final img{
+    row-gap: 1rem;
+    align-content: center;
+    
+}
